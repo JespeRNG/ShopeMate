@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMate.WebApi", "ShopMate.WebApi\ShopMate.WebApi.csproj", "{1FB40DE7-83DD-4769-BF56-D4965B9EF63F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMate.Contracts", "ShopMate.Contracts\ShopMate.Contracts.csproj", "{4FA7079B-3FE5-4844-A0D0-09C7F6E6FB54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMate.Core", "ShopMate.Core\ShopMate.Core.csproj", "{54223E45-0171-4B26-AB25-B72F2741EFC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMate.Domains", "ShopMate.Domains\ShopMate.Domains.csproj", "{D20CA9DD-F4D4-4E08-B40C-522E65810FEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMate.Infrastructure", "ShopMate.Infrastructure\ShopMate.Infrastructure.csproj", "{45DAA7B7-9F05-433E-ABF8-0BDBCB0F208C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMate.Persistence", "ShopMate.Persistence\ShopMate.Persistence.csproj", "{DD96AD5C-70E4-49B9-95CB-8E3595C2C9B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FB40DE7-83DD-4769-BF56-D4965B9EF63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB40DE7-83DD-4769-BF56-D4965B9EF63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB40DE7-83DD-4769-BF56-D4965B9EF63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB40DE7-83DD-4769-BF56-D4965B9EF63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA7079B-3FE5-4844-A0D0-09C7F6E6FB54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA7079B-3FE5-4844-A0D0-09C7F6E6FB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA7079B-3FE5-4844-A0D0-09C7F6E6FB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA7079B-3FE5-4844-A0D0-09C7F6E6FB54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54223E45-0171-4B26-AB25-B72F2741EFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54223E45-0171-4B26-AB25-B72F2741EFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54223E45-0171-4B26-AB25-B72F2741EFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54223E45-0171-4B26-AB25-B72F2741EFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20CA9DD-F4D4-4E08-B40C-522E65810FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20CA9DD-F4D4-4E08-B40C-522E65810FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20CA9DD-F4D4-4E08-B40C-522E65810FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20CA9DD-F4D4-4E08-B40C-522E65810FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45DAA7B7-9F05-433E-ABF8-0BDBCB0F208C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DAA7B7-9F05-433E-ABF8-0BDBCB0F208C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DAA7B7-9F05-433E-ABF8-0BDBCB0F208C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DAA7B7-9F05-433E-ABF8-0BDBCB0F208C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD96AD5C-70E4-49B9-95CB-8E3595C2C9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD96AD5C-70E4-49B9-95CB-8E3595C2C9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD96AD5C-70E4-49B9-95CB-8E3595C2C9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD96AD5C-70E4-49B9-95CB-8E3595C2C9B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

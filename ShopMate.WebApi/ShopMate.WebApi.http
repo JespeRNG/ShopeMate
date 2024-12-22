@@ -1,0 +1,6 @@
+@ShopMate.WebApi_HostAddress = http://localhost:5032
+
+GET {{ShopMate.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
