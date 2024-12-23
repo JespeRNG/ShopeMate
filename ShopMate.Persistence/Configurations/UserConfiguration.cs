@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ShopMate.Domains.Users;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ShopMate.Domains.Users;
 
 namespace ShopMate.Persistence.Configurations
 {
@@ -10,18 +10,25 @@ namespace ShopMate.Persistence.Configurations
         {
             builder.HasKey(u => u.Id);
 
-            //builder.ToTable();
+            builder.ToTable(DbConstants.Tables.Users);
+
+            builder.HasMany(u => u.Orders)
+                .WithOne(o => o.User)
+                .HasForeignKey(o => o.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(u => u.Addresses)
-                .WithOne()
-                .HasForeignKey(u => u.Id)
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithOne(a => a.User)
+                .HasForeignKey(a => a.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasIndex(u => u.Email)
                 .IsUnique();
 
             builder.HasIndex(u => u.Username)
                 .IsUnique();
+
+            builder.HasQueryFilter(u => !u.IsDeleted);
         }
     }
 }

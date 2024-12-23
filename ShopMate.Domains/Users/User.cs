@@ -1,4 +1,5 @@
-﻿using ShopMate.Contracts.Enums;
+﻿using ShopMate.Domains.Orders;
+using ShopMate.Contracts.Enums;
 using ShopMate.Domains.Addresses;
 using ShopMate.Domains.Interfaces;
 
@@ -29,7 +30,7 @@ namespace ShopMate.Domains.Users
 
         public DateTime UpdatedAt { get; set;}
 
-
+        public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
         public virtual ICollection<Address> Addresses { get; set; } = new HashSet<Address>();
     }
 }

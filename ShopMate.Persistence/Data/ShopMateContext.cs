@@ -10,9 +10,15 @@ using ShopMate.Domains.Categories;
 using ShopMate.Domains.OrderItems;
 using Microsoft.EntityFrameworkCore;
 using ShopMate.Domains.ShoppingCarts;
+using ShopMate.Persistence;
 
 public class ShopMateContext : DbContext
 {
+    public ShopMateContext(DbContextOptions<ShopMateContext> options)
+        : base(options)
+    {
+    }
+
     public DbSet<User> Users { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<Product> Products { get; set; }
@@ -22,8 +28,6 @@ public class ShopMateContext : DbContext
     public DbSet<Category> Categories { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
     public DbSet<ShoppingCart> ShoppingCarts { get; set; }
-
-    public ShopMateContext(DbContextOptions<ShopMateContext> options) : base(options) { }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
@@ -36,14 +40,25 @@ public class ShopMateContext : DbContext
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<User>().HasQueryFilter(u => !u.IsDeleted);
-        modelBuilder.Entity<Order>().HasQueryFilter(o => !o.IsDeleted);
-        modelBuilder.Entity<Product>().HasQueryFilter(p => !p.IsDeleted);
-        modelBuilder.Entity<Category>().HasQueryFilter(c => !c.IsDeleted);
-        modelBuilder.Entity<OrderItem>().HasQueryFilter(oi => !oi.IsDeleted);
-        modelBuilder.Entity<ShoppingCart>().HasQueryFilter(sc => !sc.IsDeleted);
+        foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+        {
+            if (typeof(IEntity).IsAssignableFrom(entityType.ClrType))
+            {
+                modelBuilder.Entity(entityType.ClrType)
+                    .Property("CreatedAt")
+                    .HasColumnType(DbConstants.DateTimeType)
+                    .HasDefaultValueSql(DbConstants.DefaultDateTimeFunc)
+                    .IsRequired();
+
+                modelBuilder.Entity(entityType.ClrType)
+                    .Property("UpdatedAt")
+                    .HasColumnType(DbConstants.DateTimeType)
+                    .HasDefaultValueSql(DbConstants.DefaultDateTimeFunc)
+                    .IsRequired();
+            }
+        }
     }
-        
+
     private void HandleDeletion()
     {
         ChangeTracker.DetectChanges();
