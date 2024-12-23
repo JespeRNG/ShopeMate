@@ -1,6 +1,6 @@
-﻿using ShopMate.Domains.Users;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ShopMate.Domains.Entities;
 
 namespace ShopMate.Persistence.Configurations
 {

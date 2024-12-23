@@ -1,7 +1,6 @@
-﻿using ShopMate.Domains.Users;
-using ShopMate.Domains.Interfaces;
+﻿using ShopMate.Domains.Interfaces;
 
-namespace ShopMate.Domains.Addresses
+namespace ShopMate.Domains.Entities
 {
     public class Address : IEntity
     {

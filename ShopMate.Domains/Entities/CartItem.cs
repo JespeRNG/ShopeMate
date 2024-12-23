@@ -1,8 +1,6 @@
-﻿using ShopMate.Domains.Products;
-using ShopMate.Domains.Interfaces;
-using ShopMate.Domains.ShoppingCarts;
+﻿using ShopMate.Domains.Interfaces;
 
-namespace ShopMate.Domains.CartItems
+namespace ShopMate.Domains.Entities
 {
     public class CartItem : IEntity
     {

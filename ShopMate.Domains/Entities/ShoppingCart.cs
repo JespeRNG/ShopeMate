@@ -1,8 +1,6 @@
-﻿using ShopMate.Domains.Users;
-using ShopMate.Domains.CartItems;
-using ShopMate.Domains.Interfaces;
+﻿using ShopMate.Domains.Interfaces;
 
-namespace ShopMate.Domains.ShoppingCarts
+namespace ShopMate.Domains.Entities
 {
     public class ShoppingCart : IEntity, ISoftDeletable
     {

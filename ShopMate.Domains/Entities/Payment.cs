@@ -1,8 +1,7 @@
-﻿using ShopMate.Domains.Orders;
-using ShopMate.Contracts.Enums;
+﻿using ShopMate.Contracts.Enums;
 using ShopMate.Domains.Interfaces;
 
-namespace ShopMate.Domains.Payments
+namespace ShopMate.Domains.Entities
 {
     public class Payment : IEntity
     {

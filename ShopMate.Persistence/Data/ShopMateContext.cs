@@ -1,16 +1,8 @@
 ﻿using System.Reflection;
-using ShopMate.Domains.Users;
-using ShopMate.Domains.Orders;
-using ShopMate.Domains.Products;
-using ShopMate.Domains.Payments;
-using ShopMate.Domains.Addresses;
-using ShopMate.Domains.CartItems;
-using ShopMate.Domains.Interfaces;
-using ShopMate.Domains.Categories;
-using ShopMate.Domains.OrderItems;
-using Microsoft.EntityFrameworkCore;
-using ShopMate.Domains.ShoppingCarts;
 using ShopMate.Persistence;
+using ShopMate.Domains.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using ShopMate.Domains.Entities;
 
 public class ShopMateContext : DbContext
 {

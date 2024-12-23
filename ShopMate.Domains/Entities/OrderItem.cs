@@ -1,8 +1,6 @@
-﻿using ShopMate.Domains.Orders;
-using ShopMate.Domains.Products;
-using ShopMate.Domains.Interfaces;
+﻿using ShopMate.Domains.Interfaces;
 
-namespace ShopMate.Domains.OrderItems
+namespace ShopMate.Domains.Entities
 {
     public class OrderItem : IEntity, ISoftDeletable
     {

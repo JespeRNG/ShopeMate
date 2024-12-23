@@ -1,11 +1,9 @@
-﻿using ShopMate.Domains.Users;
-using ShopMate.Contracts.Enums;
+﻿using ShopMate.Contracts.Enums;
 using ShopMate.Domains.Interfaces;
-using ShopMate.Domains.OrderItems;
 
-namespace ShopMate.Domains.Orders
+namespace ShopMate.Domains.Entities
 {
-    public class Order: IEntity, ISoftDeletable
+    public class Order : IEntity, ISoftDeletable
     {
         public Guid Id { get; set; }
 
